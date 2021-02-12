@@ -1,0 +1,15 @@
+/*
+* Naam-Student1: Wouter de Bruijn
+* Nummer-Student1: 20180225
+* Naam-Student2: …
+* Nummer-Student2: …
+* Opdracht: A
+*/
+
+Lees Celsius
+
+fahrenheit = celsius * 1.8 + 32
+kelvin = celsius + 273.15
+
+schrijf C K F
+schijf celsius fahrenheit kelvin

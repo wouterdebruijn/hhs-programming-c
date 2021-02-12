@@ -3,9 +3,9 @@
 /*
 * Naam-Student1: Wouter de Bruijn
 * Nummer-Student1: 20180225
-* Naam-Student2: …
-* Nummer-Student2: …
-* Opdracht: A
+* Naam-Student2: Lars van Megchelen
+* Nummer-Student2: 20091052
+* Opdracht: A1
 * Bronnen: 
 * 	C - F Formula: https://www.almanac.com/content/temperature-conversion#:~:text=C%C2%B0%20to%20F%C2%B0,%2F5)%20and%20add%2032.
 */

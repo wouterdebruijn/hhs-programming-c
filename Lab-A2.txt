@@ -1,0 +1,12 @@
+/*
+* Naam-Student1: Wouter de Bruijn
+* Nummer-Student1: 20180225
+* Naam-Student2: Lars van Megchelen
+* Nummer-Student2: 20091052
+* Opdracht: A2
+*/
+
+Lees t1 v n
+
+resultaat = t1 + v * (n - 1)
+Schrijf resultaat

@@ -1,0 +1,29 @@
+/*
+* Naam-Student1: Wouter de Bruijn
+* Nummer-Student1: 20180225
+* Naam-Student2: Lars van Megchelen
+* Nummer-Student2: 20091052
+* Opdracht: A2
+*/
+
+[Main]
+Lees getal
+is het getal een priem getal?
+Schrijf antwoord van functie naar user
+
+
+[IsPriemGetal]
+getal < 2: Geen priemgetal
+als getal > 2 dan
+
+	telling = 0
+	voor alle getallen tussen getal en de wortel van getal (getal2)
+		als getal gedeeltdoor getal2 geen rest geeft dan
+			telling = telling + 1
+	
+	als telling > 1
+		geen priemgetal!
+	anders
+		wel priemgetal!
+	
+

@@ -1,0 +1,48 @@
+/*
+* Naam-Student1: Wouter de Bruijn
+* Nummer-Student1: 20180225
+* Naam-Student2: Lars van Megchelen
+* Nummer-Student2: 20091052
+*/
+
+start programma
+	initialisatie getal times = 0
+	vraag gebruiker om invoer, sla op in times variable
+	
+	initialisatie getal i;
+	
+	i=0
+	voor i kleiner dan times doe:
+		initialisatie kommagetal a
+		initialisatie kommagetal b
+		initialisatie kommagetal c
+
+		vraag gebruiker om invoer a b c
+
+		voer functie abc uit met waardes a, b en c
+	einde voor
+
+discriminant functie
+	initialisatie kommagetal uitvoer = b^2 - 4ac
+	functie geeft waarde van kommagetal terug
+
+abc functie
+	initialisatie discr = voer functie discriminant uit
+
+	als discr kleiner dan 0
+		schrijf naar gebruiker: De vergelijking {a}x^2 + {b}x + {c} heeft geen reele oplossingen.
+		eindig functie
+
+	als discr is 0
+		initialisatie kommagetal x = (-b - discr^2) / 2a
+		schrijf naar gebruiker: De oplossing van {a}x^2 + {b}x + {c} is:
+		schrijf naar gebruiker: x = {x}
+		eindig functie
+
+	als discr is grooter dan 0
+		initialisatie kommagetal x1 = (-b - discr^2) / 2a
+		initialisatie kommagetal x1 = (-b + discr^2) / 2a
+		schrijf naar gebruiker: De oplossingen van {a}x^2 + {b}x + {c} zijn:
+		schrijf naar gebruiker: x1 = {x1}
+		schrijf naar gebruiker: x2 = {x2}
+		eindig functie

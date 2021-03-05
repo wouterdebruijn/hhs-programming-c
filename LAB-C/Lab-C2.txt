@@ -1,0 +1,18 @@
+/*
+* Naam-Student1: Wouter de Bruijn
+* Nummer-Student1: 20180225
+* Naam-Student2: Lars van Megchelen
+* Nummer-Student2: 20091052
+*/
+
+start functie bereken_gemiddelde 
+	initialisatie variable getal (wordt in functie meegegeven)
+
+	initialisatie statische variable avarageSum = 0
+	initialisatie statische variable avarageIndex = 0
+
+	avarageIndex = avarageIndex + 1
+
+	avarageSum = getal + avarageSum
+
+	eindig functie met uitvoer: avarageSum / avarageIndex 

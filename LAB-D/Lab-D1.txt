@@ -1,0 +1,78 @@
+/*
+* Naam-Student1: Wouter de Bruijn
+* Nummer-Student1: 20180225
+* Naam-Student2: Lars van Megchelen
+* Nummer-Student2: 20091052
+*/
+
+initialisatie currentChar = A
+
+start programma
+	initialisatie 2dArray table 10x10
+	initialisatie tries = 0;
+
+	table[0][0] = A
+
+	vul2DArray(REG table, IN .)
+	
+	initialisatie x = 0
+	initialisatie y = 0
+
+	zolang tries kleiner is dan 100 AND currentChar is kleiner dan Z
+		initialisatie direction = random nummer van 0 tot & met 3
+		
+		als direction is 0
+			x = x-1
+			als isFree (IN x, IN y, REG table)
+				currentChar = currentChar + 1
+				table[x][y] = currentChar
+				tries = 0
+			anders
+				x = x + 1
+				tries = tries + 1
+
+		als direction is 1
+			y = y-1
+			als isFree (IN x, IN y, REG table)
+				currentChar = currentChar + 1
+				table[x][y] = currentChar
+				tries = 0
+			anders
+				y = y + 1
+				tries = tries + 1
+
+		als direction is 2
+			x = x+1
+			als isFree (IN x, IN y, REG table)+
+				currentChar = currentChar + 1
+				table[x][y] = currentChar
+				tries = 0
+			anders
+				x = x - 1
+				tries = tries + 1
+
+		als direction is 3
+			y = y+1
+			als isFree (IN x, IN y, REG table)
+				currentChar = currentChar + 1
+				table[x][y] = currentChar
+				tries = 0
+			anders
+				y = y - 1
+				tries = tries + 1
+
+	print2DArray(REG table)
+einde programma
+
+start print2DArray(REG table)
+	voor i = 0 tot en met 9
+		voor j = 0 tot en met 9
+			schrijf naar gebruiker table[i][j]
+	schrijf nieuwe line
+einde print2DArray
+
+start vul2DArray(REG table, IN char)
+	voor i = 0 tot en met 9
+		voor j = 0 tot en met 9
+			table[i][j] = char
+einde print2DArray

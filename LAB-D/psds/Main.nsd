@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:nsd="https://structorizer.fisch.lu" version="3.31-02" preRepeat="until " postFor="to" preReturn="return" postForIn="in" preWhile="while " output="OUTPUT" input="INPUT" preFor="for" preExit="exit" preLeave="leave" ignoreCase="true" preThrow="throw" preForIn="foreach" stepFor="by" author="Wouter" created="2021-03-15" changedby="Wouter" changed="2021-03-15" origin="Structorizer 3.31-02" text="&#34;Main&#34;" comment="" color="ffffff" type="program" style="nice">
+	<children>
+		<instruction text="&#34;	srand(time(0)); // Init random&#34;,&#34;	&#34;,&#34;	initialisatie table[10][10] = {};&#34;,&#34;	&#34;,&#34;	fill2DArray(table, '.');&#34;,&#34;	&#34;,&#34;	initialisatie tries = 0;&#34;,&#34;	table[0][0] = countingChar(1);&#34;,&#34;	&#34;,&#34;	initialisatie x = 0;&#34;,&#34;	initialisatie y = 0;&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+		<while text="&#34;while (tries kleiner is dan 100 AND countingChar(0) is kleiner dan 'Z')&#34;" comment="" color="ffffff" disabled="0">
+			<qWhile>
+				<instruction text="&#34;initialisatie direction = random nummer van 0 tot &amp; met 3&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+				<alternative text="&#34;direction is 0&#34;" comment="" color="ffffff" disabled="0">
+					<qTrue>
+						<instruction text="&#34;x = x-1&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+						<alternative text="&#34;isFree (IN x, IN y, REG table)&#34;" comment="" color="ffffff" disabled="0">
+							<qTrue>
+								<instruction text="&#34;currentChar = currentChar + 1&#34;,&#34;    table[x][y] = currentChar&#34;,&#34;    tries = 0&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+							</qTrue>
+							<qFalse>
+								<instruction text="&#34;x = x + 1&#34;,&#34;    tries = tries + 1&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+							</qFalse>
+						</alternative>
+					</qTrue>
+					<qFalse color="ffffff">
+					</qFalse>
+				</alternative>
+				<alternative text="&#34;direction is 1&#34;" comment="" color="ffffff" disabled="0">
+					<qTrue>
+						<instruction text="&#34;y = y-1&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+						<alternative text="&#34;isFree (IN x, IN y, REG table)&#34;" comment="" color="ffffff" disabled="0">
+							<qTrue>
+								<instruction text="&#34;currentChar = currentChar + 1&#34;,&#34;    table[x][y] = currentChar&#34;,&#34;    tries = 0&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+							</qTrue>
+							<qFalse>
+								<instruction text="&#34;y = y + 1&#34;,&#34;    tries = tries + 1&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+							</qFalse>
+						</alternative>
+					</qTrue>
+					<qFalse color="ffffff">
+					</qFalse>
+				</alternative>
+				<alternative text="&#34;direction is 2&#34;" comment="" color="ffffff" disabled="0">
+					<qTrue>
+						<instruction text="&#34;x = x+1&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+						<alternative text="&#34;isFree (IN x, IN y, REG table)&#34;" comment="" color="ffffff" disabled="0">
+							<qTrue>
+								<instruction text="&#34;currentChar = currentChar + 1&#34;,&#34;    table[x][y] = currentChar&#34;,&#34;    tries = 0&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+							</qTrue>
+							<qFalse>
+								<instruction text="&#34;x = x - 1&#34;,&#34;    tries = tries + 1&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+							</qFalse>
+						</alternative>
+					</qTrue>
+					<qFalse color="ffffff">
+					</qFalse>
+				</alternative>
+				<alternative text="&#34;direction is 3&#34;" comment="" color="ffffff" disabled="0">
+					<qTrue>
+						<instruction text="&#34;y = y+1&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+						<alternative text="&#34;isFree (IN x, IN y, REG table)&#34;" comment="" color="ffffff" disabled="0">
+							<qTrue>
+								<instruction text="&#34;currentChar = currentChar + 1&#34;,&#34;    table[x][y] = currentChar&#34;,&#34;    tries = 0&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+							</qTrue>
+							<qFalse>
+								<instruction text="&#34;y = y - 1&#34;,&#34;    tries = tries + 1&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+							</qFalse>
+						</alternative>
+					</qTrue>
+					<qFalse color="ffffff">
+					</qFalse>
+				</alternative>
+			</qWhile>
+		</while>
+		<instruction text="&#34;print2DArray(REG table)&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+	</children>
+</root>

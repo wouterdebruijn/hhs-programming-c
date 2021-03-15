@@ -13,12 +13,10 @@ void fill2DArray(char array[10][10], char c);
 void print2DArray(char array[10][10]);
 
 int randomDirection();
-char countingChar();
+char countingChar(int upBy);
 
 int handleStep(int x, int y, char array[10][10]);
 int isFree(int x, int y, char array[10][10]);
-
-char currentChar = 'A';
 
 
 int main(void) {
@@ -29,12 +27,12 @@ int main(void) {
 	fill2DArray(table, '.');
 	
 	int tries = 0;
-	table[0][0] = countingChar();
+	table[0][0] = countingChar(1);
 	
 	int x = 0;
 	int y = 0;
 	
-	while(tries < 100 && currentChar < 'Z') { // inefficient but working, fast enough :)
+	while(tries < 100 && countingChar(0) < 'Z') { // inefficient but working, fast enough :)
 		int direction = randomDirection();
 		
 		if (direction == 0) { // LEFT
@@ -84,7 +82,7 @@ int main(void) {
 
 int handleStep(int x, int y, char array[10][10]) {
 	if (isFree(x, y, array)) {
-		array[y][x] = countingChar();
+		array[y][x] = countingChar(1);
 		return(1);
 	} 
 	return(0);
@@ -122,9 +120,8 @@ int randomDirection() {
 	return num;
 }
 
-char countingChar() {
+char countingChar(int upBy) { // this is a bodge
 	static char current = 'A' - 1;
-	current = current + 1;
-	currentChar = current;
+	current = current + upBy;
 	return current;
 }

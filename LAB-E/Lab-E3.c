@@ -42,8 +42,8 @@ int scanSentence(char array[], char checkChars[]) {
 	int counter = 0;
 	char lastMatch;
 	
-	for (i=0; i < length - 1; i++) {
-		if (*(array + i) == *checkChars && lastMatch == *(array + i))
+	for (i=0; i < length; i++) {
+		if (lastMatch == *checkChars && *(array + i) == *(checkChars + 1))
 			counter ++;
 		lastMatch = *(array + i);
 	}
